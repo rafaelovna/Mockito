@@ -39,7 +39,7 @@ public class UserServiceTest {
 
     @Test
     public void shouldCheckUserExists1() {
-        when(userDao.getUserByName(NEW_USER_NAME)).thenReturn(out);
+        when(userDao.getUserByName(NEW_USER_NAME)).thenReturn(null);
         Assertions.assertFalse(userService.checkUserExist(out));
     }
 }

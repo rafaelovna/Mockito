@@ -12,7 +12,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    private final UserDaoImpl userDao = new UserDaoImpl();
+    private final UserDaoImpl userDao;
 
     @Override
     public boolean checkUserExist(User user) {

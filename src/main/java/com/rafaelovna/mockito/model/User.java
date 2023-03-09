@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class User {
 
-    public String name;
+    private String name;
     private String login;
     private String email;
 
@@ -32,6 +32,5 @@ public class User {
         } else {
             this.email = email;
         }
-
     }
 }
