@@ -13,9 +13,9 @@ import static org.mockito.Mockito.when;
 
 public class UserServiceTest {
 
-    public static final String USER_NAME = "Mariya";
-    public static final String NEW_USER_NAME = "Galina";
-    User user2 = new User("Mariya", "mariya", "mariya@mail.ru");
+    public String USER_NAME = "Mariya";
+    public String NEW_USER_NAME = "Galina";
+    User mariya = new User("Mariya", "mariya", "mariya@mail.ru");
     User out = new User("Galina", "galina", "galina@mail.ru");
 
 
@@ -32,8 +32,8 @@ public class UserServiceTest {
 
     @Test
     public void shouldCheckUserExists() {
-        when(userDao.getUserByName(USER_NAME)).thenReturn(user2);
-        Assertions.assertTrue(userService.checkUserExist(user2));
+        when(userDao.getUserByName(USER_NAME)).thenReturn(mariya);
+        Assertions.assertTrue(userService.checkUserExist(mariya));
 
     }
 
