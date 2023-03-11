@@ -12,7 +12,6 @@ public class UserServiceImpl implements UserService {
 
     private UserDaoImpl userDao;
 
-
     @Override
     public boolean checkUserExist(User user) {
         return Objects.equals(user, userDao.getUserByName(user.getName()));
