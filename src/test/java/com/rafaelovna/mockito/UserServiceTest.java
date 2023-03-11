@@ -5,17 +5,19 @@ import com.rafaelovna.mockito.model.User;
 import com.rafaelovna.mockito.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+
 import static org.mockito.Mockito.when;
 
-
+@ExtendWith(MockitoExtension.class)
 public class UserServiceTest {
 
-    public String USER_NAME = "Mariya";
+
     public String NEW_USER_NAME = "Galina";
-    User mariya = new User("Mariya", "mariya", "mariya@mail.ru");
     User out = new User("Galina", "galina", "galina@mail.ru");
 
 
@@ -32,8 +34,8 @@ public class UserServiceTest {
 
     @Test
     public void shouldCheckUserExists() {
-        when(userDao.getUserByName(USER_NAME)).thenReturn(mariya);
-        Assertions.assertTrue(userService.checkUserExist(mariya));
+        when(userDao.getUserByName(NEW_USER_NAME)).thenReturn(out);
+        Assertions.assertTrue(userService.checkUserExist(out));
     }
 
     @Test
