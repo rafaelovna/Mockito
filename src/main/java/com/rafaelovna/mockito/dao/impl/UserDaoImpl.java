@@ -8,7 +8,7 @@ import java.util.List;
 
 public class UserDaoImpl implements Dao {
 
-    private final List<User> users = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
 
     public UserDaoImpl() {
         User user1 = new User("Ivan", "ivan", "ivan@mail.ru");

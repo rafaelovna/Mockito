@@ -34,7 +34,6 @@ public class UserServiceTest {
     public void shouldCheckUserExists() {
         when(userDao.getUserByName(USER_NAME)).thenReturn(mariya);
         Assertions.assertTrue(userService.checkUserExist(mariya));
-
     }
 
     @Test
